@@ -1,0 +1,14 @@
+  <!DOCTYPE html>
+  <html>
+  <head><title>Triage</title></head>
+  <body>
+  <script>
+    const view = new URLSearchParams(location.search).get('view') || 'tabs';
+    chrome.runtime.sendMessage(
+      'ahbbimipbjjflhhadjkoclahjkakpgfi',
+      { action: 'deepLink', view },
+      () => window.close()
+    );
+  </script>
+  </body>
+  </html>
